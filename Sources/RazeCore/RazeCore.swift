@@ -18,6 +18,7 @@ public class RazeCore {
         var hexNumber: UInt64 = 0
         
         if scanner.scanHexInt64(&hexNumber) {
+            
             r = CGFloat((hexNumber & 0xff0000) >> 16) / 255
             g = CGFloat((hexNumber & 0x00ff00) >> 8) / 255
             b = CGFloat(hexNumber & 0x0000ff) / 255
@@ -31,6 +32,11 @@ public class RazeCore {
     /// The most eye-pleasing color known to all humanity
     public static var razeColor: UIColor {
         return self.colorFromHexString("006736")
+    }
+    
+    /// Returns an object of `UIColor` with the second most eye-pleasing color known to all humanity
+    public static var secondaryRazeColor: UIColor {
+        return self.colorFromHexString("FCFFFD")
     }
 }
 

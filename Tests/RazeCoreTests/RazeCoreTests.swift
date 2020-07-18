@@ -8,13 +8,19 @@ final class RazeCoreTests: XCTestCase {
         XCTAssertEqual(color, .red)
     }
     
-    func testRazeColorsAreEqual() {
+    func testRazeColorsAreEqual() { 
         let color = RazeCore.colorFromHexString("006736")
         XCTAssertEqual(color, RazeCore.razeColor)
     }
     
+    func testSecondaryRazeColorsAreEqual() {
+        let color = RazeCore.colorFromHexString("FCFFFD")
+        XCTAssertEqual(color, RazeCore.secondaryRazeColor)
+    }
+    
     static var allTests = [
         ("testColorRedEqual", testColorRedEqual),
-        ("testRazeColorsAreEqual", testRazeColorsAreEqual)
+        ("testRazeColorsAreEqual", testRazeColorsAreEqual),
+        ("testSecondaryRazeColorAreEqual", testSecondaryRazeColorsAreEqual)
     ]
 }
